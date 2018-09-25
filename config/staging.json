@@ -1,0 +1,4 @@
+{
+    "API_BASE_PATH": "qa.example.com",
+    "env": "staging"
+}

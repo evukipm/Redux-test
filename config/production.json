@@ -1,0 +1,4 @@
+{
+    "API_BASE_PATH": "api.example.com",
+    "env": "production"
+}

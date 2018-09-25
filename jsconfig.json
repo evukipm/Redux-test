@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+         "experimentalDecorators": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "src/routes/old-template",
+        "**/*.css"
+    ],
+    "include": [
+        "src/*"
+    ]
+}
