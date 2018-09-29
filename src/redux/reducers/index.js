@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import * as demoReducers from './demoReducers';
+import * as steamReducers from './steamReducers';
 
 const store = combineReducers({
-    ...demoReducers
+    ...steamReducers
 });
 
 export default store;

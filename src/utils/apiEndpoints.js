@@ -1,1 +1,1 @@
-export const FETCH_USER_DATA = '/auth/{:id}';
+export const FETCH_USER_DATA = '/user/{:id}';

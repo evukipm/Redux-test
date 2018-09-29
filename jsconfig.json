@@ -10,6 +10,6 @@
         "**/*.css"
     ],
     "include": [
-        "src/*"
+        "src/*", "src/redux/reducers/steamReducers.js", "src/redux/reducers/steamActions.js", "src/redux/actions/steamActions.js"
     ]
 }

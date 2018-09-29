@@ -9,7 +9,7 @@ const enhancer = composeWithDevTools(
     applyMiddleware(thunk, createLogger())
 );
 let configureStore;
-if (process.env.ENV === 'development') {
+if (process.env.ENV !== 'production') {
     configureStore = (initialState) => {
         return createStore(rootReducer, initialState, enhancer);
     }
