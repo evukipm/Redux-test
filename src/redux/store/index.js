@@ -8,13 +8,16 @@ import rootReducer from '../reducers';
 const enhancer = composeWithDevTools(
     applyMiddleware(thunk, createLogger())
 );
+let configureStore;
 if (process.env.ENV === 'development') {
-    export default function configureStore (initialState) {
+    configureStore = (initialState) => {
         return createStore(rootReducer, initialState, enhancer);
     }
 } else {
-    export default function configureStore (initialState) {
+   configureStore = (initialState) => {
       return createStore(rootReducer, initialState, applyMiddleware(thunk))
     };
 
 }
+
+export default configureStore;

@@ -3,7 +3,7 @@
 . ~/.profile
 . ~/.bashrc
 
-nvm use
+nvm use 8
 
 echo "Cleaning dist directory"
 rm -rf dist
