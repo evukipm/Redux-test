@@ -9,7 +9,7 @@ import App from './App';
 import configureStore from './redux/store';
 const store = configureStore();
 
-render(
+render (
     <Provider store={store}>
         <BrowserRouter>
             <App />
