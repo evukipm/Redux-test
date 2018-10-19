@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import propTypes from 'prop-types';
-import Spinner from '../Spinner';
 
 export default class AsyncContainer extends Component {
     constructor () {
@@ -28,7 +27,7 @@ export default class AsyncContainer extends Component {
         }
         if (!loaded) {
             return (
-                <Spinner />
+                <h3>loading...</h3>
             );
         } else if (error) {
             return (
