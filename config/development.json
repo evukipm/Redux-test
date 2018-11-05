@@ -1,4 +1,4 @@
 {
-    "API_BASE_PATH": "http://localhost:8080",
+    "API_BASE_PATH": "https://react-redux-demo-api.herokuapp.com/",
     "env": "development"
 }

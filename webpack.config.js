@@ -47,33 +47,6 @@ module.exports = {
                 use: [
                     {loader: 'file-loader'}
                 ]
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    {
-                        loader: 'style-loader' // creates style nodes from JS strings
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true,
-                            minimize: true
-                        } // translates CSS into CommonJS
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: false
-                        }
-                    }
-                ]
             }
         ]
     },
