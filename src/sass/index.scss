@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;    
+}
+
+.app-root {
+    display: flex;
+    & .sidebar {
+        height: 100vh;
+        background-color: red;
+        width: 30%;
+        overflow: hidden;
+    }
+    & .app-container {
+        width: 70%;
+    }
+}
