@@ -5,8 +5,9 @@
   "author": "oscmedgon",
   "license": "MIT",
   "scripts": {
-    "dev": "bash server.sh",
-    "build": "bash build-prod.sh",
+    "dev": "export ENV=development && ./node_modules/.bin/webpack-dev-server --config webpack.config.js",
+    "build": "export ENV=production && webpack --config webpack.config.prod.js -p",
+    "build-qa": "export ENV=staging && webpack --config webpack.config.prod.js -p",
     "test": "jest",
     "test:watch": "npm test -- --watch"
   },
