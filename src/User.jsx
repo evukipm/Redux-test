@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 
 import AsyncContainer from './components/asyncComponents/AsyncContainer'
 import { fetchUser } from './redux/actions/steamActions';
+import {toggleSidebar} from './redux/actions/sidebarActions';
 
 class User extends Component {
     handleSubmit = (event) => {
@@ -31,9 +32,19 @@ function mapStateToProps ({user}) {
 
 export default connect(mapStateToProps)(User)
 
-const RenderUser = ({user}) => (
-    <section>
-        <img width='400' src={user.avatarfull} />
-        <h1>{user.personaname}</h1>
-    </section>
-)
+
+@connect((state) => state)
+class RenderUser extends Component {
+    componentDidMount () {
+        this.props.dispatch(toggleSidebar())
+    }
+    render () {
+        const {user} = this.props; 
+        return (
+            <section>
+                <img width='400' src={user.avatarfull} />
+                <h1>{user.personaname}</h1>
+            </section>
+        )
+    }   
+}
