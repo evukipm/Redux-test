@@ -14,8 +14,8 @@ if (process.env.ENV !== 'production') {
         return createStore(rootReducer, initialState, enhancer);
     }
 } else {
-   configureStore = (initialState) => {
-      return createStore(rootReducer, initialState, applyMiddleware(thunk))
+    configureStore = (initialState) => {
+        return createStore(rootReducer, initialState, applyMiddleware(thunk))
     };
 
 }
